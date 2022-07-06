@@ -1,7 +1,7 @@
 <?php
 
 // PROJECT URLS
-define("CONF_URL_TEST", "http://localhost/tools");
+define("CONF_URL_TEST", "http://www.localhost/tools");
 define("CONF_URL_BASE", "https://www.imagemvip.com.br");
 
 
@@ -23,3 +23,4 @@ define("CONF_SOCIAL_YOUTUBE_PAGE", "GhoulSlasherGames");
 define("CONF_VIEW_PATH", __DIR__ . "/../../shared/views");
 define("CONF_VIEW_THEME", "tools");
 define("CONF_VIEW_EXT", "php");
+define("CONF_VIEW_TEMPLATE", "_theme");

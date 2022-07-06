@@ -12,13 +12,25 @@ class Web extends Controller
 
     public function home(?array $data): void
     {
-        var_dump($data);
+        
+        echo $this->view->render("home", [
+            "head" => null
+        ]);
     }
 
     
-    public function charCouter(?array $data): void
+    public function charCounter(?array $data): void
     {
-        # code...
+        $head = $this->seo->render(
+            "Contador de Caracteres, Palavras e Linhas | " . CONF_SITE_NAME,
+            "O Contador de Caracteres é uma ferramenta simples, ele conta caracteres e palavras em um texto. Comece a contar agora!",
+            url("/contadorcaracteres"),
+            theme("/assets/images/contadorcaracteres.jpg")
+        );
+
+        echo $this->view->render("counter-chars", [
+            "head" => $head
+        ]);
     }
 }
 
