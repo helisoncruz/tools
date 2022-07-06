@@ -18,7 +18,6 @@ $route->get("/", "Web:home");
 $route->get("/contadorcaracteres", "Web:charCounter");
 
 
-contadorcaracteres
 /**
 * EXECUTE THE ROUTE
 */
