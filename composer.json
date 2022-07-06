@@ -1,0 +1,25 @@
+{
+    "name": "ghoulslasher/tools",
+    "description": "Tools - Ferramentas, códigos e fragmentos",
+    "type": "project",
+    "license": "GNU General Public License v3.0",
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            
+        ]
+    },
+    "authors": [
+        {
+            "name": "Helison Santos",
+            "email": "contato@agenciahouse.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
