@@ -11,7 +11,8 @@
             "Source\\": "source/"
         },
         "files": [
-            
+            "source/Boot/Config.php",
+            "source/Boot/Helpers.php"
         ]
     },
     "authors": [
@@ -21,5 +22,10 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "coffeecode/router": "^1.0",
+        "coffeecode/optimizer": "^2.0",
+        "league/plates": "^3.4",
+        "matthiasmullie/minify": "^1.3"
+    }
 }
