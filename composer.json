@@ -3,18 +3,6 @@
     "description": "Tools - Ferramentas, códigos e fragmentos",
     "type": "project",
     "license": "GNU General Public License v3.0",
-    "config": {
-        "vendor-dir": "vendor"
-    },
-    "autoload": {
-        "psr-4": {
-            "Source\\": "source/"
-        },
-        "files": [
-            "source/Boot/Config.php",
-            "source/Boot/Helpers.php"
-        ]
-    },
     "authors": [
         {
             "name": "Helison Santos",
@@ -22,6 +10,18 @@
         }
     ],
     "minimum-stability": "stable",
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+          "Source\\": "source/"
+        },
+        "files": [
+            "source/Boot/Config.php",
+            "source/Boot/Helpers.php"
+        ]
+    },
     "require": {
         "coffeecode/router": "^1.0",
         "coffeecode/optimizer": "^2.0",
