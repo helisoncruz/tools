@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" type="text/css">
 
+    <!-- Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8242320593092908" crossorigin="anonymous"></script>
+
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?= theme("assets/styles.css", CONF_VIEW_THEME) ?>" />
     <?= $this->section("styles"); ?>
