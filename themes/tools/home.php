@@ -34,6 +34,11 @@
                 </ul>
             </div>
         </div>
-        <div class="col-12"></div>
+        <div class="col-12">
+            <!-- Adesense 1 -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8242320593092908" data-ad-slot="2374530016" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script> (adsbygoogle = window.adsbygoogle || []).push({});  </script>
+            <!-- Adesense 1 end -->
+        </div>
     </div>
 </div>
