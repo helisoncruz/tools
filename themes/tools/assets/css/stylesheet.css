@@ -3280,8 +3280,8 @@ h2.resp-accordion:first-child {
 #footer {
   background: #fff;
   color: #252b33;
-  padding: 66px 0px;
-  padding: 4.125rem 0;
+  padding: 33px 0px;
+  /* padding: 4.125rem 0; */
   border-top: 1px solid #ecf3f5;
 }
 
@@ -3313,7 +3313,7 @@ h2.resp-accordion:first-child {
 }
 
 #footer .footer-copyright {
-  border-top: 1px solid #e2e8ea;
+  /* border-top: 1px solid #e2e8ea; */
   padding: 0px 0px;
   color: #67727c;
 }

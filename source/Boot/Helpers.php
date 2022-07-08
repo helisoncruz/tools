@@ -5,6 +5,7 @@
 * HELPER - URLS
 --------- --------- --------- */
 
+use Source\Core\Session;
 
 /** -------------------
 * PROJECT URL
@@ -90,4 +91,57 @@ function image(?string $image, int $width, int $height): ?string
         return "";
     }
     return null;
+}
+
+
+/** ------------------- ------------------- -------------------
+* HELPER - REQUESTS
+--------- --------- --------- */
+
+/** -------------------
+* Creates a field to help protect from attacks [Cross-site Request Forgery].
+* @return string
+--------- */
+function csrf_input(): string
+{
+    session()->csrf();
+    return "<input type='hidden' name='csrf' value='".(session()->csrf_token ?? "")."'></input>";    
+}
+
+/** -------------------
+* Checks the CSRF code if it is valid or not.
+* @return string
+--------- */
+function csrf_verify($request): bool
+{
+    if (empty(session()->csrf_token) || empty($request['csrf_token']) || $request['csrf_token'] != session()->csrf_token) {
+        return false;
+    }
+    return true;
+}
+
+/** -------------------
+* Get and Check the flash messages from Sessions.
+* @return string
+--------- */
+function flash(): ?string
+{
+    $session = new \Source\Core\Session();
+    if ($flash = $session->flash()) {
+        echo $flash;
+    }
+    return null;
+}
+
+/** ------------------- ------------------- -------------------
+* HELPER - CORES
+--------- --------- --------- */
+
+/** -------------------
+* Retrieves an instance of the Session class.
+* @return Source\Core\Session
+--------- */
+function session(): Source\Core\Session
+{
+    return new Source\Core\Session();
 }

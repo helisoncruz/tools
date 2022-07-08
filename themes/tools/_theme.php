@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?= theme("/assets/images/favicon.png", CONF_VIEW_THEME); ?>" />
+    <link rel="shortcut icon" href="<?= theme("/assets/images/favicon.ico", CONF_VIEW_THEME); ?>" type="image/x-icon">
+    <link rel="icon" href="<?= theme("/assets/images/favicon.ico", CONF_VIEW_THEME); ?>" type="image/x-icon">
+    
     <?= $head; ?>
     
     <!-- WebFonts -->
@@ -47,6 +50,28 @@
             </div>
         </div>
         <!-- Content end -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-copyright pt-3 pt-lg-2 mt-2">
+                    <div class="row">
+                        <div class="col-lg">
+                            <p class="text-center text-lg-start mb-2 mb-lg-0">
+                                Copyright &copy; <?= date("Y"); ?> <a href="<?= url("/") ?>" title="<?= CONF_SITE_NAME; ?>"><?= CONF_SITE_NAME; ?></a>. All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="col-lg d-lg-flex align-items-center justify-content-lg-end">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"> <a class="nav-link" href="<?= url("/termos-de-uso") ?>" title="Termos de Uso">Termos de Uso</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="<?= url("/politica-de-privacidade") ?>" title="Política de Privacidade">Política de Privacidade</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
 
     </div>
     <!-- Document Wrapper end -->

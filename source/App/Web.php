@@ -12,9 +12,15 @@ class Web extends Controller
 
     public function home(?array $data): void
     {
+        $head = $this->seo->render(
+            "Ferramentas e Aplicativos Online | " . CONF_SITE_NAME,
+            "Ferramentas e aplicativos online de manipulação de texto, sorteio, código de barras, data e hora, criptografia, números aleatórios, entre outras.",
+            url("/"),
+            theme("/assets/images/shared.jpg")
+        );
         
         echo $this->view->render("home", [
-            "head" => null
+            "head" => $head
         ]);
     }
 
@@ -32,5 +38,40 @@ class Web extends Controller
             "head" => $head
         ]);
     }
+
+
+    public function codeBase64(?array $data): void
+    {
+        $result = null;
+        $data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
+        if (!empty($data['csrf'])) {
+            if (!csrf_verify($data['csrf'])) {
+                $result = ($data['type'] == "encode" ? base64_encode($data['text']) : base64_decode($data['text']));
+            }
+        }
+
+
+        $title = "Base64 Encode e Decode Online";
+        $description = "Codifique para o formato Base64 ou decodifique a partir dele com várias opções avançadas. Nosso site tem uma ferramenta online fácil de usar para converter seus dados.";
+        if (!empty($data['type']) && $data['type'] == "decode") {
+            $title = "Base64 Decode e Encode Online";
+            $description = "Decodifique para o formato Base64 ou decodifique a partir dele com várias opções avançadas. Nosso site tem uma ferramenta online fácil de usar para converter seus dados.";
+        }
+
+        $head = $this->seo->render(
+            "{$title} | " . CONF_SITE_NAME,
+            "{$description}",
+            url("/base64/{$data['type']}"),
+            theme("/assets/images/base64.jpg")
+        );
+
+        echo $this->view->render("code-base64", [
+            "head" => $head,
+            "type" => $data['type'],
+            "text" => $data['text'] ?? "",
+            "result" => $result
+        ]);
+    }
+
 }
 

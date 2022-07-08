@@ -7,7 +7,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a class="d-flex" href="<?= url(); ?>" title="<?= CONF_SITE_NAME; ?>">
-                        <img src="#" width="121" height="33" alt="<?= CONF_SITE_NAME; ?>" />
+                        <img src="<?= theme("/assets/images/logo.png", CONF_VIEW_THEME); ?>" height="100" alt="<?= CONF_SITE_NAME; ?>"/>
                     </a>
                 </div>
                 <!-- Logo end -->
@@ -24,13 +24,20 @@
                 <nav class="primary-menu navbar navbar-expand-lg">
                     <div id="header-nav" class="collapse navbar-collapse">
                         <ul class="navbar-nav mr-auto">
-                            <!-- <li><a href="<?= url(); ?>">Ferramentas</a></li> -->
+                            <li><a href="<?= url(); ?>">Home</a></li>
                             <li class="dropdown"> 
                                 <a class="dropdown-toggle" href="#" title="Ferramentas">Contadores</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="<?= url("/contadorcaracteres"); ?>">Contador de Caracteres</a></li>
                                 </ul>
                             </li>
+                            <li class="dropdown"> 
+                                <a class="dropdown-toggle" href="#" title="Criptografia e Codificação">Criptografia e Codificação</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= url("/base64/encode"); ?>">Base64 Encode Online</a></li>
+                                    <li><a class="dropdown-item" href="<?= url("/bade64/decode"); ?>">Base64 Decode Online</a></li>
+                                </ul>
+                            </li> 
                         </ul>
                     </div>
                 </nav>

@@ -114,7 +114,7 @@ class Session
     /**
     * CSRF Token
     */
-    public function csef(): void
+    public function csrf(): void
     {
         $_SESSION['csrf_token'] = md5(uniqid(rand(), true));
     }
