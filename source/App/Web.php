@@ -24,7 +24,6 @@ class Web extends Controller
         ]);
     }
 
-    
     public function charCounter(?array $data): void
     {
         $head = $this->seo->render(
@@ -38,7 +37,6 @@ class Web extends Controller
             "head" => $head
         ]);
     }
-
 
     public function codeBase64(?array $data): void
     {
@@ -70,6 +68,41 @@ class Web extends Controller
             "type" => $data['type'],
             "text" => $data['text'] ?? "",
             "result" => $result
+        ]);
+    }
+
+
+    /**
+    * TERMS
+    */
+    public function terms(): void
+    {
+        $head = $this->seo->render(
+            "Termos de Uso | " . CONF_SITE_NAME,
+            "Ao acessar ao site " . CONF_SITE_NAME . " concorda em cumprir estes termos de serviço, todas as leis e regulamentos.",
+            url("/termos-de-uso"),
+            theme("/assets/images/shared.jpg")
+        );
+
+        echo $this->view->render("terms", [
+            "head" => $head
+        ]);
+    }
+
+    /**
+    * POLICY
+    */
+    public function policy(): void
+    {
+        $head = $this->seo->render(
+            "Política de Privacidade | " . CONF_SITE_NAME,
+            "A sua privacidade é importante para nós. É política do " . CONF_SITE_NAME . " respeitar a sua privacidade em relação a qualquer informação sua.",
+            url("/politica-de-privacidade"),
+            theme("/assets/images/shared.jpg")
+        );
+
+        echo $this->view->render("policy", [
+            "head" => $head
         ]);
     }
 

@@ -44,10 +44,8 @@
         <!-- Header End -->
 
         <!-- Content -->
-        <div id="content" class="py-3 py-lg-5">
-            <div class="container">
-                <?= $this->section("content"); ?>
-            </div>
+        <div id="content">
+            <?= $this->section("content"); ?>
         </div>
         <!-- Content end -->
 
