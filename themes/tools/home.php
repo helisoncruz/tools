@@ -12,6 +12,13 @@
                             <p class="mb-0 text-muted">Calcula quantos caracteres, palavras e linhas existem no texto.</p>
                         </a>
                     </li>
+                    <li class="border-top mt-3 pt-3">
+                        <a href="<?= url("/converter/maiusculas-minusculas"); ?>" title="Contador de Caracteres">
+                            <h5 class="text-5 mb-0 text-hover">Converter Maiúsculas e Minúsculas</h5>
+                            <p class="mb-0 text-muted">Ferramenta para converter um texto em letras maiúsculas ou minúsculas.</p>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>

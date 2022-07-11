@@ -20,10 +20,19 @@
 
     <!-- Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8242320593092908" crossorigin="anonymous"></script>
-
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="<?= theme("assets/styles.css", CONF_VIEW_THEME) ?>" />
     <?= $this->section("styles"); ?>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6M5NPGN30"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F6M5NPGN30');
+    </script>
 </head>
 <body>
     <!-- Preloader -->

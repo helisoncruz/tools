@@ -16,7 +16,7 @@
 
     <div class="row mb-3">
         <div class="col-12"><h2 class="mb-4"><b>Contador de Caracteres</b> e Palavras</h2> </div>
-        <div class="col-12"><textarea id="texto" class="form-control" placeholder="Comece a digitar ou cole seu texto aqui..."></textarea> </div>
+        <div class="col-12"><textarea id="text" class="form-control" placeholder="Comece a digitar ou cole seu texto aqui..."></textarea> </div>
     </div>
 
     <div class="row mb-3" id="resultado">
@@ -35,25 +35,3 @@
         </div>
     </div>
 </div>
-
-<?php $this->start('scripts'); ?>
-<script>
-    $(function(){
-        $(document).on('input', '#texto', function() {
-            var text = $(this).val();
-            var words = text.match(/\S+/g);
-            var result = {
-                textChars: text.length,
-                textCharsNoSpaces: text.replace(/\s+/g, '').length,
-                textWords: words ? words.length : 0,
-                textLines: text.split(/\r*\n/).length
-            }
-            $('.textChars').text(result.textChars);
-            $('.textCharsNoSpaces').text(result.textCharsNoSpaces);
-            $('.textWords').text(result.textWords);
-            $('.textLines').text(result.textLines);
-        });
-    });
-</script>
-<?php $this->end(); ?>
-

@@ -71,6 +71,20 @@ class Web extends Controller
         ]);
     }
 
+    public function convertLowUp(?array $data): void
+    {
+        $head = $this->seo->render(
+            "Converter Maiúsculas e Minúsculas | " . CONF_SITE_NAME,
+            "Ferramenta para converter um texto em letras maiúsculas ou minúsculas. Convert Case: lower case, UPPER CASE.",
+            url("/converter/maiusculas-minusculas"),
+            theme("/assets/images/converter.jpg")
+        );
+
+        echo $this->view->render("convert-lower-upper", [
+            "head" => $head
+        ]);
+    }
+
 
     /**
     * ABOUT
