@@ -5,7 +5,7 @@
         <div class="col-12">
             <h2 class="mb-2">Gerador de CNPJ</h2>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-8">
             <p>Utilize nosso gerador de cnpj, basta clicar em "Gerar CNPJ" e pronto!!! Um novo número de CNPJ válido será gerado. Você ainda tem opção de colocar ou não os "pontos" entre os números.</p>
         </div>
         <div class="col-12">
@@ -14,18 +14,29 @@
     </div>
 
     <div class="row mb-5">
-        <div class="col-6">
+        <div class="col-12 col-6">
             <form action="<?= url("gerador/cnpj"); ?>" method="post">
                 <?= csrf_input(); ?>
                 <div class="row g-3 align-items-center">
-                    <div class="col-12 switch-lg">
+                    <div class="col-12 col-auto switch-lg">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" name="numbers" id="numbers" value="s">
                             <label class="form-check-label" for="numbers">Gerar apaenas números?</label>
                         </div>
                     </div>
-                    <div class="col-auto"> <input type="text" id="cnpj" class="form-control form-control-sm cnpj" size="35" placeholder="O CNPJ gerado aparece aqui." readonly> </div>
-                    <div class="col-auto"> <input type="submit" class="btn btn-sm btn-success shadow-none" value="Gerar CNPJ"> </div>
+                    <div class="col-12 col-auto"> <input type="submit" class="btn btn-sm btn-success shadow-none" value="Gerar CNPJ"> </div>
+                    <div class="col-12"> <hr class="my-3"> </div>
+                    <div class="col-12"> 
+                        <div class="row align-items-center">
+                            <div class="col-auto"> RESULTADO: </div>
+                            <div class="col-auto"> 
+                                <div class="input-group">
+                                    <input type="text" id="cnpj" class="form-control form-control-sm cnpj field-to-copy" size="35" placeholder="O CNPJ gerado aparece aqui."> 
+                                    <span class="input-group-text"> <span class="material-icons-round copy" data-copy>content_copy</span> </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

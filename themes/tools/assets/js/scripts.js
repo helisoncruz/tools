@@ -33,6 +33,13 @@ $(function() {
     * EVENTS
     --------- --------- --------- */
 
+    // copy input groups
+    $(document).on('click', '[data-copy]', function() {
+        var field = $(this).parents('.input-group').find('.field-to-copy');
+        field.select();
+        document.execCommand('copy');
+    });
+
 
     // characters counts
     $(document).on('input', '#text', function() {
