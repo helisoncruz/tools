@@ -25,6 +25,7 @@
                     <div id="header-nav" class="collapse navbar-collapse">
                         <ul class="navbar-nav mr-auto">
                             <li><a href="<?= url(); ?>">Home</a></li>
+                            <li><a href="<?= url("/sobre"); ?>">Sobre</a></li>
                             <li class="dropdown"> 
                                 <a class="dropdown-toggle" href="#" title="Ferramentas">Contadores</a>
                                 <ul class="dropdown-menu">

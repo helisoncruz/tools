@@ -73,6 +73,24 @@ class Web extends Controller
 
 
     /**
+    * ABOUT
+    */
+    public function about(): void
+    {
+        $head = $this->seo->render(
+            "Sobre nós | " . CONF_SITE_NAME,
+            "Sou um site com ferramentas úteis para resolver problemas simples.",
+            url("/about"),
+            theme("/assets/images/sobre.jpg")
+        );
+
+        echo $this->view->render("about", [
+            "head" => $head
+        ]);
+    }
+
+
+    /**
     * TERMS
     */
     public function terms(): void
