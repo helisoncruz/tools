@@ -19,7 +19,7 @@
         </div>
         <?php endif; ?>
         <div class="col-12">
-            <form action="<?= url("base64/{$type}"); ?>" method="post">
+            <form action="<?= url("base64/{$type}"); ?>" method="post" class="ajax_off">
                 <?= csrf_input(); ?>
                 <textarea id="texto" name="text" class="form-control p-4 mb-5 bg-white shadow-sm rounded border" placeholder="Comece a digitar ou cole seu texto aqui..."><?= $text ?? ""; ?></textarea>
                 <input type="submit" class="btn btn-sm btn-success shadow-none" value="<?= ($type == "encode" ? "Codificar Agora" : "Decodificar Agora"); ?>">

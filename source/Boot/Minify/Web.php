@@ -19,6 +19,8 @@ if (strpos(url(), "localhost")) {
     // JS
     $minifyJS = new \MatthiasMullie\Minify\JS();
     $minifyJS->add(__DIR__ . "/../../../shared/jquery/jquery.min.js");
+    $minifyJS->add(__DIR__ . "/../../../shared/jquery/jquery.mask.js");
+    $minifyJS->add(__DIR__ . "/../../../shared/jquery/jquery.form.js");
     $minifyJS->add(__DIR__ . "/../../../shared/bootstrap/js/bootstrap.bundle.js");
 
     $jsDir = scandir(__DIR__ . "/../../../themes/" . CONF_VIEW_THEME . "/assets/js");

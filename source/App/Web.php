@@ -1,6 +1,8 @@
 <?php 
 namespace Source\App;
 
+use Tigo\DocumentBr\Cpf;
+use Tigo\DocumentBr\Cnpj;
 use Source\Core\Controller;
 
 class Web extends Controller
@@ -71,6 +73,11 @@ class Web extends Controller
         ]);
     }
 
+
+
+    /**
+    * CONVERSIONS
+    */
     public function convertLowUp(?array $data): void
     {
         $head = $this->seo->render(
@@ -81,6 +88,56 @@ class Web extends Controller
         );
 
         echo $this->view->render("convert-lower-upper", [
+            "head" => $head
+        ]);
+    }
+
+
+    /**
+    * GENERATORS
+    */
+    public function generatorCpf(?array $data): void
+    {
+        $data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
+        if (!empty($data['csrf'])) {
+            if (!csrf_verify($data['csrf'])) {
+                $json['cpf'] = (new Cpf())->generate();
+                echo json_encode($json);
+                return;
+            }
+        }
+
+        $head = $this->seo->render(
+            "Gerador de Cpf | " . CONF_SITE_NAME,
+            "Ferramenta online de gerar CPF válidos! Nosso gerador de cpf ainda tem a opção de gerar com pontos e sem os pontos entre os números.",
+            url("/gerador/cpf"),
+            theme("/assets/images/cpf.jpg")
+        );
+
+        echo $this->view->render("generator-cpf", [
+            "head" => $head
+        ]);
+    }
+
+    public function generatorCnpj(?array $data): void
+    {
+        $data = filter_var_array($data, FILTER_SANITIZE_STRIPPED);
+        if (!empty($data['csrf'])) {
+            if (!csrf_verify($data['csrf'])) {
+                $json['cnpj'] = (new Cnpj())->generate();
+                echo json_encode($json);
+                return;
+            }
+        }
+
+        $head = $this->seo->render(
+            "Gerador de Cnpj | " . CONF_SITE_NAME,
+            "Ferramenta online de gerar CNPJ válidos! Nosso gerador de cnpj ainda tem a opção de gerar com pontos e sem os pontos entre os números.",
+            url("/gerador/cnpj"),
+            theme("/assets/images/cnpj.jpg")
+        );
+
+        echo $this->view->render("generator-cnpj", [
             "head" => $head
         ]);
     }

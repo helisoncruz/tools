@@ -27,16 +27,23 @@
                             <li><a href="<?= url(); ?>">Home</a></li>
                             <li><a href="<?= url("/sobre"); ?>">Sobre</a></li>
                             <li class="dropdown"> 
+                                <a class="dropdown-toggle" href="#" title="Geradores">Geradores</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?= url("/gerador/cpf"); ?>" title="Gerador de CPF">Gerador de CPF</a></li>
+                                    <li><a class="dropdown-item" href="<?= url("/gerador/cnpj"); ?>" title="Gerador de Cnpj">Gerador de Cnpj</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"> 
                                 <a class="dropdown-toggle" href="#" title="Ferramentas">Contadores</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="<?= url("/contadorcaracteres"); ?>">Contador de Caracteres</a></li>
+                                    <li><a class="dropdown-item" href="<?= url("/contadorcaracteres"); ?>" title="Contador de Caracteres">Contador de Caracteres</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown"> 
                                 <a class="dropdown-toggle" href="#" title="Criptografia e Codificação">Criptografia e Codificação</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="<?= url("/base64/encode"); ?>">Base64 Encode Online</a></li>
-                                    <li><a class="dropdown-item" href="<?= url("/bade64/decode"); ?>">Base64 Decode Online</a></li>
+                                    <li><a class="dropdown-item" href="<?= url("/base64/encode"); ?>" title="Base64 Encode Online">Base64 Encode Online</a></li>
+                                    <li><a class="dropdown-item" href="<?= url("/base64/decode"); ?>" title="Base64 Decode Online">Base64 Decode Online</a></li>
                                 </ul>
                             </li> 
                         </ul>

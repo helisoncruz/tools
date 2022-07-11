@@ -3,6 +3,26 @@
 <div class="container py-3 py-lg-5">
     <div class="row g-4">
         <div class="col-12">
+            <h3 class="mb-3 text-primary">Geradores</h3>
+            <div class="p-4 shadow-sm rounded bg-white">
+                <ul class="m-0 p-0 list-unstyled">
+                    <li>
+                        <a href="<?= url("/gerador/cpf"); ?>" title="Gerador de Cpf">
+                            <h5 class="text-5 mb-0 text-hover">Gerador de Cpf</h5>
+                            <p class="mb-0 text-muted">Gere um Cpf valido aqui de forma simples e rápida.</p>
+                        </a>
+                    </li>
+                    <li class="border-top mt-3 pt-3">
+                        <a href="<?= url("/gerador/cnpj"); ?>" title="Gerador de Cnpj">
+                            <h5 class="text-5 mb-0 text-hover">Gerador de Cnpj</h5>
+                            <p class="mb-0 text-muted">Gere um Cnpj valido aqui de forma simples e rápida.</p>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="col-12">
             <h3 class="mb-3 text-info">Ferramentas para Análise de Texto</h3>
             <div class="p-4 shadow-sm rounded bg-white">
                 <ul class="m-0 p-0 list-unstyled">
@@ -13,7 +33,7 @@
                         </a>
                     </li>
                     <li class="border-top mt-3 pt-3">
-                        <a href="<?= url("/converter/maiusculas-minusculas"); ?>" title="Contador de Caracteres">
+                        <a href="<?= url("/converter/maiusculas-minusculas"); ?>" title="Converter Maiúsculas e Minúsculas">
                             <h5 class="text-5 mb-0 text-hover">Converter Maiúsculas e Minúsculas</h5>
                             <p class="mb-0 text-muted">Ferramenta para converter um texto em letras maiúsculas ou minúsculas.</p>
                         </a>

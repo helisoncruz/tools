@@ -27,6 +27,7 @@
         "coffeecode/router": "^1.0",
         "coffeecode/optimizer": "^2.0",
         "league/plates": "^3.4",
-        "matthiasmullie/minify": "^1.3"
+        "matthiasmullie/minify": "^1.3",
+        "tigo/documentbr": "^0.0.3"
     }
 }

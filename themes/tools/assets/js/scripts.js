@@ -1,6 +1,13 @@
 $(function() {
 
     /** ------------------- ------------------- -------------------
+    * MASKS
+    --------- --------- --------- */
+    $('.cpf').mask('000.000.000-00', {reverse: true});
+    $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+
+
+    /** ------------------- ------------------- -------------------
     * FUNCTIONS
     --------- --------- --------- */
     function toUpper(text) {
@@ -25,6 +32,7 @@ $(function() {
     /** ------------------- ------------------- -------------------
     * EVENTS
     --------- --------- --------- */
+
 
     // characters counts
     $(document).on('input', '#text', function() {
@@ -92,6 +100,68 @@ $(function() {
     // selected
     $(document).on("click", "[data-select]", function(e) {
         $("#text").select().focus();
+    });
+
+
+    /** ------------------- ------------------- -------------------
+    * AJAX FORM PROCESSOR
+    --------- --------- --------- */
+
+
+    $("form:not('.ajax_off')").submit(function (e) {
+        e.preventDefault();
+        var form = $(this);
+        var load = $("#preloader");
+        var flashClass = "ajax_response";
+        var flash = $("." + flashClass);
+
+        form.ajaxSubmit({
+            url: form.attr("action"),
+            type: "POST",
+            dataType: "json",
+            beforeSend: function () {
+                load.fadeIn(200).css("display", "flex");
+            },
+            success: function (response) {
+                // redirect|reload
+                if (response.redirect) {
+                    window.location.replace(response.redirect);
+                } else if (response.reload) {
+                    window.location.reload(true);
+                } else {
+                    load.fadeOut(200);
+                }
+                // message
+                if (response.message) {
+                    if (flash.length) {
+                        flash.html(response.message).fadeIn(100).effect("bounce", 300);
+                    } else {
+                        form.prepend("<div class='" + flashClass + "'>" + response.message + "</div>")
+                            .find("." + flashClass).effect("bounce", 300);
+                    }
+                    $('html, body').animate({
+                        scrollTop: $('#content').offset().top
+                    }, 'slow');
+                } else {
+                    flash.fadeOut(100);
+                }
+                // responses
+                if(response.cpf) { // response for cpf generator
+                    if($('#numbers').is(":checked")) {
+                        $('#cpf').unmask().val(response.cpf).select();
+                    } else {
+                        $('#cpf').unmask().val(response.cpf).mask('00.000.000-00').select();
+                    }
+                }
+                if(response.cnpj) { // response for cnpj generator
+                    if($('#numbers').is(":checked")) {
+                        $('#cnpj').unmask().val(response.cnpj).select();
+                    }else {
+                        $('#cnpj').unmask().val(response.cnpj).mask('00.000.000/0000-00').select();
+                    }
+                }
+            }
+        });
     });
 
 });
