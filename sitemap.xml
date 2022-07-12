@@ -9,42 +9,52 @@
 
 <url>
   <loc>https://www.imagemvip.com.br/</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/sobre</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imagemvip.com.br/gerador/cpf</loc>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imagemvip.com.br/gerador/cnpj</loc>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/contadorcaracteres</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/base64/encode</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.imagemvip.com.br/converter/maiusculas-minusculas</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/base64/decode</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.imagemvip.com.br/converter/maiusculas-minusculas</loc>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/termos-de-uso</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.imagemvip.com.br/politica-de-privacidade</loc>
-  <lastmod>2022-07-11T13:22:36+00:00</lastmod>
+  <lastmod>2022-07-12T10:09:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
