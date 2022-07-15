@@ -15,10 +15,10 @@ class Web extends Controller
     public function home(?array $data): void
     {
 
-        echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
+        // echo $_SERVER['HTTP_USER_AGENT'] . "\n\n";
 
-        $browser = get_browser(null, true);
-        print_r($browser); 
+        // $browser = get_browser(null, true);
+        // print_r($browser); 
 
         $head = $this->seo->render(
             "Ferramentas e Aplicativos Online | " . CONF_SITE_NAME,
